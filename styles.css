@@ -1,0 +1,111 @@
+/* General Styles */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F5F5F5;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game {
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.menu {
+    margin-bottom: 20px;
+}
+
+.menu button {
+    font-size: 1.1em;
+    padding: 12px 24px;
+    background-color: #36AED2;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.menu button:hover {
+    background-color: #2A8EBB;
+    transform: translateY(-2px);
+}
+
+.menu button:active {
+    background-color: #1E6B9A;
+    transform: translateY(0);
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 1.2em;
+    color: #0F4B5F;
+    font-weight: 500;
+    background-color: #FFFFFF; /* White background */
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 2px solid #0F4B5F; /* Optional border */
+    box-shadow: none; /* Remove shadow */
+    display: inline-block; /* Ensure it doesn't stretch */
+}
+
+.message {
+    font-size: 1.4em;
+    color: #0F4B5F;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 60px); /* 10 columns, 60px each */
+    gap: 10px; /* Gap between cards */
+    margin: 0 auto;
+    width: calc(10 * 60px + 9 * 10px); /* Calculate width to fit cards and gaps */
+}
+
+.card {
+    background-color: #FFF;
+    border: 2px solid #0F4B5F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    color: transparent;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card.flipped {
+    color: #0F4B5F;
+    background-color: #E0E0E0;
+}
+
+.card.matched {
+    background-color: #A5D6A7; /* Green */
+    cursor: default;
+}
+
+.card.mismatch {
+    background-color: #F8BBD0; /* Red */
+    cursor: default;
+}
